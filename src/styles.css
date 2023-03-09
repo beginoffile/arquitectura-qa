@@ -118,8 +118,9 @@ img{
 
 .nombre-sitio span{
     font-weight: 900;
-    
 }
+
+
 
 
 
@@ -129,4 +130,43 @@ img{
         justify-content: space-between;
         align-items: center;
     }
+}
+
+.contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media(min-width:768px){
+    .contacto{
+        align-items: flex-end;
+    }
+}
+
+.header a{
+    color:var(--white);
+    font-size: 2rem;
+}
+
+.navegacion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media(min-width:768px){
+    .navegacion{
+        flex-direction: row;
+    
+    }
+}
+
+.navegacion a {
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+}
+.navegacion a:hover{
+    background-color: rgb(255  255 255 / .5);
+
 }
