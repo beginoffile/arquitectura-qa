@@ -1,0 +1,132 @@
+:root{
+    --white:#fff;
+    --black:#000;
+    --gray:#343440;
+
+    --primary-font:'Raleway', sans-serif;
+
+}
+
+
+html{
+    font-size: 62.5%;
+    box-sizing:border-box;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: var(--primary-font);
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
+
+h1, h2, h3{
+    font-weight: 900;
+    margin: 1rem 0 4rem 0;
+}
+
+h1{
+    font-size: 4.8rem;
+}
+
+h2{
+    font-size: 5.8rem;
+}
+
+h3{
+    font-size: 5rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.btn{
+    color:var(--gray);
+    background-color: var(--white);
+    border: 1px solid var(--gray);
+    padding: .5rem 2rem;
+    transition: background-color .3s;
+}
+
+
+.btn:hover{
+    background-color: var(--gray);
+    color:var(--white);
+}
+
+
+/* Utils */
+.text-center{
+    text-align: center;
+}
+
+.mt-5{
+    margin-top: 5rem;
+}
+
+
+/* Header */
+.header{
+    min-height: 60rem;
+    background-image: url(./assets/images/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 5rem 0;
+}
+
+@media(min-width:768px){
+    .header{
+        padding: 2rem 0;
+    }
+}
+
+.contenido-header{
+    display: flex;
+    flex-direction: column;
+    height: calc(60rem - 4rem);
+    justify-content: space-between;
+    color:var(--white);
+}
+
+.nombre-sitio {
+    font-weight: 300;
+    text-align: center;
+    font-size: 3rem;
+}
+
+@media(min-width:768px){
+    .nombre-sitio{
+        font-size: 5rem;
+    }
+}
+
+.nombre-sitio span{
+    font-weight: 900;
+    
+}
+
+
+
+@media(min-width:768px){
+    .barra{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
