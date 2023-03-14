@@ -5,6 +5,7 @@ const TerserPlugin = require("terser-webpack-plugin");
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
+const WorkboxPlugin = require('workbox-webpack-plugin');
    
 module.exports = (env, argv) =>{
     
@@ -116,14 +117,32 @@ module.exports = (env, argv) =>{
                 publicPath: '/',                
                 includeDirectory: false,
                 fingerprints: true,
-                crossorigin: null,                
+                crossorigin: null,  
+                ios:true,
                 // crossorigin: 'use-credentials', //can be null, use-credentials or anonymous
                 icons: [
-                  {
-                    src: path.resolve('src/assets/iconos/javascript.png'),
-                    sizes: [72, 96, 128, 144, 152, 192, 384, 512] // multiple sizes
-                  },
-                 
+                    {
+                        src: path.resolve('src/assets/iconos/header.png'),
+                        sizes: [120, 152, 167, 180, 1024],
+                        destination: path.join('icons', 'ios'),
+                        ios: true
+                    },
+                    {
+                    src: path.resolve('src/assets/iconos/header.png'),
+                    size: 1024,
+                    destination: path.join('icons', 'ios'),
+                    ios: 'startup'
+                    },
+                    {
+                    src: path.resolve('src/assets/iconos/header.png'),
+                    sizes: [36, 48, 72, 96, 128, 144, 192, 512, 256, 384, 512],
+                    destination: path.join('icons', 'android')
+                    },                  
+                    {
+                    src: path.resolve('src/assets/iconos/header.png'),
+                    size: '512x512',
+                    purpose: 'maskable'
+                    }                 
                 ]
               }),
 
@@ -160,6 +179,11 @@ module.exports = (env, argv) =>{
 
                     },                  
                 ]
+            }),
+
+            new WorkboxPlugin.GenerateSW({
+                clientsClaim:true,
+                skipWaiting:true
             }),
 
            
@@ -264,14 +288,32 @@ module.exports = (env, argv) =>{
                 publicPath: '/',                
                 includeDirectory: false,
                 fingerprints: true,
-                crossorigin: null,                
+                crossorigin: null,  
+                ios:true,
                 // crossorigin: 'use-credentials', //can be null, use-credentials or anonymous
                 icons: [
-                  {
-                    src: path.resolve('src/assets/iconos/javascript.png'),
-                    sizes: [72, 96, 128, 144, 152, 192, 384, 512] // multiple sizes
-                  },
-                 
+                    {
+                        src: path.resolve('src/assets/iconos/header.png'),
+                        sizes: [120, 152, 167, 180, 1024],
+                        destination: path.join('icons', 'ios'),
+                        ios: true
+                    },
+                    {
+                    src: path.resolve('src/assets/iconos/header.png'),
+                    size: 1024,
+                    destination: path.join('icons', 'ios'),
+                    ios: 'startup'
+                    },
+                    {
+                    src: path.resolve('src/assets/iconos/header.png'),
+                    sizes: [36, 48, 72, 96, 128, 144, 192, 512, 256, 384, 512],
+                    destination: path.join('icons', 'android')
+                    },                  
+                    {
+                    src: path.resolve('src/assets/iconos/header.png'),
+                    size: '512x512',
+                    purpose: 'maskable'
+                    }                 
                 ]
             }),
 
@@ -306,7 +348,12 @@ module.exports = (env, argv) =>{
                     },
                   
                 ]
-            })
+            }),
+
+            new WorkboxPlugin.GenerateSW({
+                clientsClaim:true,
+                skipWaiting:true
+            }),
             
         ]
     }
