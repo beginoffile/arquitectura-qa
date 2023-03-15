@@ -122,24 +122,24 @@ module.exports = (env, argv) =>{
                 // crossorigin: 'use-credentials', //can be null, use-credentials or anonymous
                 icons: [
                     {
-                        src: path.resolve('src/assets/iconos/header.png'),
+                        src: path.resolve('src/assets/iconos/architect-logo.png'),
                         sizes: [120, 152, 167, 180, 1024],
                         destination: path.join('icons', 'ios'),
                         ios: true
                     },
                     {
-                    src: path.resolve('src/assets/iconos/header.png'),
+                    src: path.resolve('src/assets/iconos/architect-logo.png'),
                     size: 1024,
                     destination: path.join('icons', 'ios'),
                     ios: 'startup'
                     },
                     {
-                    src: path.resolve('src/assets/iconos/header.png'),
+                    src: path.resolve('src/assets/iconos/architect-logo.png'),
                     sizes: [36, 48, 72, 96, 128, 144, 192, 512, 256, 384, 512],
                     destination: path.join('icons', 'android')
                     },                  
                     {
-                    src: path.resolve('src/assets/iconos/header.png'),
+                    src: path.resolve('src/assets/iconos/architect-logo.png'),
                     size: '512x512',
                     purpose: 'maskable'
                     }                 
@@ -150,7 +150,7 @@ module.exports = (env, argv) =>{
                 title: 'Mi Webpack App',
                 //filename: "index.html", // output file
                 template: './src/index.html',
-                favicon: './src/assets/iconos/javascript.png'
+                favicon: './src/assets/iconos/architect-logo.png'
             }),
 
             
@@ -293,24 +293,24 @@ module.exports = (env, argv) =>{
                 // crossorigin: 'use-credentials', //can be null, use-credentials or anonymous
                 icons: [
                     {
-                        src: path.resolve('src/assets/iconos/header.png'),
+                        src: path.resolve('src/assets/iconos/architect-logo.png'),
                         sizes: [120, 152, 167, 180, 1024],
                         destination: path.join('icons', 'ios'),
                         ios: true
                     },
                     {
-                    src: path.resolve('src/assets/iconos/header.png'),
+                    src: path.resolve('src/assets/iconos/architect-logo.png'),
                     size: 1024,
                     destination: path.join('icons', 'ios'),
                     ios: 'startup'
                     },
                     {
-                    src: path.resolve('src/assets/iconos/header.png'),
+                    src: path.resolve('src/assets/iconos/architect-logo.png'),
                     sizes: [36, 48, 72, 96, 128, 144, 192, 512, 256, 384, 512],
                     destination: path.join('icons', 'android')
                     },                  
                     {
-                    src: path.resolve('src/assets/iconos/header.png'),
+                    src: path.resolve('src/assets/iconos/architect-logo.png'),
                     size: '512x512',
                     purpose: 'maskable'
                     }                 
@@ -321,7 +321,7 @@ module.exports = (env, argv) =>{
                 title: 'Mi Webpack App',
                 // filename: 'index.html',
                 template: './src/index.html',
-                favicon: './src/assets/iconos/javascript.png'                
+                favicon: './src/assets/iconos/architect-logo.png'                
             }),            
             
             new MiniCssExtractPlugin({
